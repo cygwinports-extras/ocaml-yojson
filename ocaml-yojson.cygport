@@ -1,13 +1,16 @@
-ORIG_PN=${PN#ocaml-}
 inherit ocaml
 
-CATEGORY="OCaml"
+NAME="ocaml-yojson"
+VERSION=1.0.3
+RELEASE=1
+CATEGORY="Libs"
 SUMMARY="OCaml JSON library"
 DESCRIPTION="Yojson is an optimized parsing and printing library for the JSON
 format. It addresses a few shortcomings of json-wheel including 2x speedup,
 polymorphic variants and optional syntax for tuples and variants."
-HOMEPAGE="http://martin.jambon.free.fr/yojson.html"
-SRC_URI="http://martin.jambon.free.fr/${ORIG_PN}-${PV}.tar.bz2"
+HOMEPAGE="http://mjambon.com/yojson.html"
+SRC_URI="http://mjambon.com/releases/yojson/yojson-${VERSION}.tar.gz"
+SRC_DIR="yojson-${VERSION}"
 
 DEPEND="cppo
 	ocaml(biniou)
